@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD</title>
+</head>
+<body>
+<form action="{% url 'name' %}" method="post">
+    {% csrf_token %}
+    {% if number == 0 %}
+    <label for="your_name">name </label>
+    {% else %}
+    <label for="your_name">name {{number}} </label>
+    {% endif %}
+    <input id="your_name" type="text" name="your_name" autofocus >
+    <input type="submit" value="add">
+</form>
+    <a href="{% url 'json' %}" class="" aria-current="true">
+                json
+            </a>
+</body>
+</html>
